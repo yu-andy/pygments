@@ -10,8 +10,7 @@
 """
 
 from pygments.style import Style
-from pygments.token import Keyword, Name, Comment, String, Error, \
-     Number, Operator, Generic, Whitespace, Punctuation
+from pygments.token import Keyword, Name, Comment, String, Error, Number, Operator, Generic, Whitespace, Punctuation, Text
 
 
 class NordStyle(Style):
@@ -19,9 +18,17 @@ class NordStyle(Style):
     Pygments version of the "nord" theme by Arctic Ice Studio
     """
 
-    background_color = '#2e3440'
-    default = '#d8dee9'
+    linenos = "#FF0000"
+    line_number_color = "#D8DEE9"
+    line_number_background_color = "#242933"
+    line_number_special_color = "#242933"
+    line_number_special_background_color = "#D8DEE9"
 
+    background_color = "#242933"
+    highlight_color = "#3B4252"
+    default = "#d8dee9"
+
+    # fmt: off
     styles = {
         Whitespace:                 '#d8dee9',
         Punctuation:                '#eceff4',
@@ -70,5 +77,6 @@ class NordStyle(Style):
         Generic.Output:             '#d8dee9',
         Generic.Traceback:          '#bf616a',
 
-        Error:                      '#bf616a'
+        Error:                      '#bf616a',
+        Text:                       '#d8dee9',
     }
